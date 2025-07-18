@@ -8,6 +8,7 @@ import HologramViewer from '@/components/HologramViewer';
 import InteractiveFeatures from '@/components/InteractiveFeatures';
 import CountUp from '@/components/ui/count-up';
 import Beams from '@/components/ui/beams';
+import ContainerScrollDemo from '@/components/ContainerScrollDemo';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -316,53 +317,8 @@ const Home = () => {
       </section>
 
       {/* Demo Video Section */}
-      <section id="demo" className="w-full py-16 sm:py-20 md:py-24 lg:py-32 bg-white/30 dark:bg-black/30 backdrop-blur-sm">
-        <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "linear" }}
-            className="text-center mb-10 sm:mb-12 md:mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight mb-6 sm:mb-8 tracking-tight text-gray-900 dark:text-white">
-              See It in Action
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 font-light max-w-3xl mx-auto px-4">
-              Watch how HoloInteract transforms presentations and education
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1, ease: "linear" }}
-            className="relative"
-          >
-            <motion.div 
-              className="aspect-video bg-gradient-to-br from-gray-100/80 to-gray-200/80 dark:from-gray-900/80 dark:to-gray-800/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl overflow-hidden relative group cursor-pointer"
-              whileHover={{ scale: 1.01 }}
-              transition={{ duration: 0.2, ease: "linear" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/15 to-purple-600/15 dark:from-blue-600/25 dark:to-purple-600/25" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.15, ease: "linear" }}
-                  className="w-16 h-16 sm:w-20 sm:h-20 bg-white/90 dark:bg-white/25 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white dark:group-hover:bg-white/35 transition-all duration-200"
-                >
-                  <Play className="w-6 h-6 sm:w-8 sm:h-8 text-gray-900 dark:text-white ml-1" />
-                </motion.div>
-              </div>
-              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-gray-900 dark:text-white">
-                <h3 className="text-lg sm:text-xl font-medium mb-1 sm:mb-2">HoloInteract Demo</h3>
-                <p className="text-gray-600 dark:text-white/80 text-xs sm:text-sm">Experience the future of interaction</p>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
+      <section id="demo" className="w-full bg-white/30 dark:bg-black/30 backdrop-blur-sm">
+        <ContainerScrollDemo />
       </section>
 
       {/* Testimonials */}
