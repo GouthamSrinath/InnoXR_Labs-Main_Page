@@ -121,6 +121,13 @@ export default {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        aurora: "aurora 60s linear infinite",
+        shine: 'shine 4s ease-in-out infinite',
+        'spin-slow': 'spin 3s linear infinite',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
