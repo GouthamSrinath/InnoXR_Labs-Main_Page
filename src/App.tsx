@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { ThemeProvider } from 'next-themes';
 import { useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import Navbar from './components/Navbar';
+import ResizableNavbarDemo from './components/ResizableNavbarDemo';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -65,7 +65,7 @@ function AppContent() {
         
         {/* Main Content with backdrop blur */}
         <div className="relative z-10 min-h-screen bg-white/60 dark:bg-black/60 backdrop-blur-sm">
-          <Navbar />
+          <ResizableNavbarDemo />
           <main className="w-full">
             <PageTransition>
               <Routes>
